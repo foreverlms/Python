@@ -30,21 +30,43 @@ class TrainsCollections(object):
 	header='车次 车站 时间 历时 一等 二等 软卧 硬卧 硬座 无座'.split()
 
 	def __init__(self,avaliable_trains,options) :
+		"""建立一个TrainsCOllections类用于存放可选的火车班次
+		：param available_trains:包含所有可选列车的列表，每个元素由字典构成，包含车次的车次号、出发时间、到站时间等等
+		:param options:查询的选项，-g表示高铁等等
+		
+		"""
 		self.avaliable_trains=avaliable_trains
 		self.options=options
 	def _get_duration_(self,raw_train) :
+		
+		'''
+		不用考虑天数，因为火车时间最大单位是小时...
+		init_duration=raw_train.get('lishi')
+		if init_duration.count(':')==2 :
+			duration=init_duration.replace(':','天',1).replace(':','小时')+'分'
+		else :
+			duration=raw_train.get('lishi').replace(':','小时')+'分'
+		'''
+		#获取火车行驶时间并格式化字符串
 		duration=raw_train.get('lishi').replace(':','小时')+'分'
+		#判断行驶时间是否已"00"开始，若如此，只返回分钟
 		if duration.startswith('00') :
 			return duration[4:]
+		#以'0'开始，返回所有字符
 		if duration.startswith('0') :
 			return duration[1:]
 		return duration
+	#获取符合查询要求的车次，将基本信息写入一个list
 	@property
 	def trains(self) :
 		for init_raw_train in self.avaliable_trains:
 			raw_train=init_raw_train['queryLeftNewDTO']
+			#这些字典的key得通过返回的json确定名称才能得到正确的车次字典
 			train_no=raw_train['station_train_code']
-			initial=train_no[0].lower()
+			#获取车次
+			initial=train_no[0].lower()#小写以与用户输入的options比较
+			#这里not self.options or initial in self.options
+			#顺序是先not self.options判断用户输入的是否为空指令串，是就为True，就打印本趟列车，肯定符合（没有要求）。不是就为False,然后看本趟列车代码是否在用户要求之中
 			if not self.options or initial in self.options:
 				train =[
 					train_no,
