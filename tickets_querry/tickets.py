@@ -6,31 +6,34 @@ Usage:
 	tickets [-gdtkz] <from> <to> <date>
 
 Options:
-	-h,--help 	show the helping menu
-	-g 			gaotie
-	-d 			dongche
-	-t 			tekuai
-	-k 			kuaisu
-	-z 			zhida
+	-h,--help 		显示帮助栏
+	-g 			高铁
+	-d 			动车
+	-t 			特快
+	-k 			快速
+	-z 			直达
 
 Example:
-	tickets beijing shanghai 2016-10-10
-	tickets -dg chengdu nanjing 2016-10-10
+	tickets 北京 上海 2016-10-10
+	tickets -dg 成都 南京 2016-10-10
 """
 from docopt import docopt
 from prettytable import PrettyTable
 from stations import stations
-import json
+from colorama import init,Fore
+#import json
 import requests
 
+init()
+
 class TrainsCollections(object):
-	header='checi chezhan shijian lishi yideng erdeng ruanwo yingwo yingzuo wuzuo'.split()
+	header='车次 车站 时间 历时 一等 二等 软卧 硬卧 硬座 无座'.split()
 
 	def __init__(self,avaliable_trains,options) :
 		self.avaliable_trains=avaliable_trains
 		self.options=options
 	def _get_duration_(self,raw_train) :
-		duration=raw_train.get('lishi').replace(':','xiaoshi')+'fen'
+		duration=raw_train.get('lishi').replace(':','小时')+'分'
 		if duration.startswith('00') :
 			return duration[4:]
 		if duration.startswith('0') :
@@ -45,10 +48,10 @@ class TrainsCollections(object):
 			if not self.options or initial in self.options:
 				train =[
 					train_no,
-					'\n'.join([raw_train['from_station_name'],
-						raw_train['to_station_name']]),
-					'\n'.join([raw_train['start_time'],
-						raw_train['arrive_time']]),
+					'\n'.join([Fore.GREEN+raw_train['from_station_name']+Fore.RESET,
+						Fore.RED+raw_train['to_station_name']+Fore.RESET]),
+					'\n'.join([Fore.GREEN+raw_train['start_time']+Fore.RESET,
+						Fore.RED+raw_train['arrive_time']+Fore.RESET]),
 					self._get_duration_(raw_train),
 					raw_train['zy_num'],
 					raw_train['ze_num'],
