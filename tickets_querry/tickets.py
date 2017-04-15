@@ -31,7 +31,7 @@ class TrainsCollections(object):
 
 	def __init__(self,avaliable_trains,options) :
 		"""建立一个TrainsCOllections类用于存放可选的火车班次
-		：param available_trains:包含所有可选列车的列表，每个元素由字典构成，包含车次的车次号、出发时间、到站时间等等
+		:param available_trains:包含所有可选列车的列表，每个元素由字典构成，包含车次的车次号、出发时间、到站时间等等
 		:param options:查询的选项，-g表示高铁等等
 		
 		"""
