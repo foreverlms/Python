@@ -97,7 +97,7 @@ class TrainsCollections(object):
 							pass
 						else:
 							train[i]='\n'.join([train[i],price_json[self.seat_order[i-4]]])
-				print(train_no)
+				#print(train_no)打印那辆列车出了问题
 				yield train
 	def prettyprint(self) :
 		pt=PrettyTable()
