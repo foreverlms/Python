@@ -58,6 +58,7 @@ class TrainsCollections(object):
 		return duration
 	#获取符合查询要求的车次，将基本信息写入一个list
 	seat_order=['M','O','A4','A3','A1','WZ']
+	#read_only_attribute_'trains'
 	@property
 	def trains(self) :
 		for init_raw_train in self.avaliable_trains:
@@ -76,6 +77,7 @@ class TrainsCollections(object):
 				)
 				price_request = requests.get(price_url, verify=False)
 				price_data = price_request.json()
+				print(price_data)
 				price_json=price_data['data']
 				train =[
 					train_no,
@@ -92,12 +94,12 @@ class TrainsCollections(object):
 					raw_train['wz_num']
 				]
 				if price_request.status_code==200 :
+					print(train_no)#打印那辆列车出了问题
 					for i in range(4,10) :
 						if train[i] == '--' or train[i]=='无' :
 							pass
 						else:
 							train[i]='\n'.join([train[i],price_json[self.seat_order[i-4]]])
-				#print(train_no)打印那辆列车出了问题
 				yield train
 	def prettyprint(self) :
 		pt=PrettyTable()
