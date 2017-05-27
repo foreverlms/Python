@@ -12,7 +12,7 @@ import math
 import jieba.posseg as pseg
 
 
-class Busan(object) :
+class Fushannxing(object) :
 	def __init__(self,script_name,jieba_dict) :
 		self.names={}
 		self.relationships={}
@@ -61,4 +61,4 @@ class Busan(object) :
 						f.write(name+' '+v+' '+str(w)+'\r\n')
 
 if __name__ == '__main__':
-	Busan('script_of_fushanxing.txt','dict.txt')
+	Fushanxing('script_of_fushanxing.txt','dict.txt')
