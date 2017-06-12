@@ -11,6 +11,7 @@
 @time: 2017/6/1 23:00
 """
 
+#写入html
 class HtmlOutputer() :
 	def __init__(self):
 		self.datas=[]
