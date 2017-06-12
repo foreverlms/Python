@@ -30,6 +30,7 @@ class SpideMain() :
                     new_urls,new_data=self.parser.parse(new_url,html_cont)
                     self.urls.add_new_urls(new_urls)
                     self.outputer.collect_data(new_data)
+                    #设定爬取url数量
                     if count==100 :
                         print("Craw finished.")
                         break
