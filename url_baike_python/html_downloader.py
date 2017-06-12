@@ -11,6 +11,7 @@
 @time: 2017/6/1 22:59
 """
 
+#利用request实现下载网页
 from urllib import request
 class HtmlDownloader() :
     def download(self, url):
