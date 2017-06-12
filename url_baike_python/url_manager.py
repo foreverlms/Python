@@ -11,6 +11,7 @@
 @time: 2017/6/1 22:58
 """
 
+#爬虫管理器
 class UrlManager() :
     def __init__(self):
         self.new_urls=set()
