@@ -13,7 +13,7 @@
 
 def write_md(biscuits={},comments={}) :
     comment_dict=dict(zip(biscuits,comments))
-    with open('README.md','a',encoding='utf-8') as f :
+    with open('./warning_result/README.md','a',encoding='utf-8') as f :
         for biscuit,comment in comment_dict.items() :
             # if comment[:2]=='>>' :
             #     comment=comment.replace('>>','\\>>',1)
