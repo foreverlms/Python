@@ -11,6 +11,8 @@
 @time: 2017/6/26 22:58
 """
 
+import matplotlib.pyplot as plt
+
 def write_md(biscuits={},comments={}) :
     #将爬取到的所有评论写入md格式文件
     comment_dict=dict(zip(biscuits,comments))
@@ -27,3 +29,12 @@ def write_md(biscuits={},comments={}) :
             #评论内容
             f.write(comment.encode('utf-8').decode('utf-8'))
             f.write('\n')
+
+def chart_output(words=[]):
+    data=[word[1] for word in words]
+    label=[word[0] for word in words]
+    plt.bar(range(len(data)),data,tick_label=label)
+    plt.show()
+
+def word_cloud() :
+    pass
