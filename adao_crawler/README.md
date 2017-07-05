@@ -10,3 +10,7 @@ This crawler is about a thread about confession.The initial thread's url is [her
 *	show how many stupid things and bad guys in the world
 *	show how many people and things you may want to see and regret.
 *	show this world is still a world deserves love.
+## Dependency
+* jieba
+* matplotlib
+* beautifulsoup
