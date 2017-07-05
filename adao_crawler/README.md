@@ -27,7 +27,7 @@ This crawler is about a thread about confession.The initial thread's url is [her
 * ('父母', 17)
 * ('大学', 17)
 * ('人生', 17)
-### Longest comments
+### Longest comment
 神父，我为自己发这个串忏悔
 
 初中的时候，情窦初开，喜欢上桃花
