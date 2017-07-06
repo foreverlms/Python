@@ -144,4 +144,4 @@ You can have direct access to these comments in `warning_result/README.md`,all t
 ### My view
 Everyone is an unique piece of this world.We have almost 70~100 years to approach death.During these days,you may have done something really stupid and regret for all your life behind.You met the girl you adore and you missed;you nearly had the chance to succeed but you didn't grasp it;you could say 'I love you' to somebody but they were gone.When you are reading these comments.though pretty enough of them are just kidding,you will share what they regret and remember yours.
 
-<font color="#4590a3" size = "6px" align="center">往事不可追</font>
+<font color="#4590a3" size = "6px">往事不可追</font>
