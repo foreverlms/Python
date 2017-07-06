@@ -32,8 +32,12 @@ This crawler is about a thread about confession.The initial thread's url is [her
 
 ![bar graph](https://github.com/coderchaser/LearningPython/blob/version-1/adao_crawler/zhuzhuangtu.jpg)
 
-![word_cloud1](word_cloud1.png)
-![word_cloud2](word_cloud2.png)
+#### wordcloud
+
+![tree](https://github.com/coderchaser/LearningPython/blob/master/adao_crawler/Tree.png)
+![word_cloud1](https://github.com/coderchaser/LearningPython/blob/master/adao_crawler/word_cloud_1.png)
+![red_heart](https://github.com/coderchaser/LearningPython/blob/master/adao_crawler/heart.png)
+![word_cloud2](https://github.com/coderchaser/LearningPython/blob/master/adao_crawler/word_cloud_2.png)
 ### Longest comment
 神父，我为自己发这个串忏悔
 
