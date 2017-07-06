@@ -10,6 +10,7 @@ This crawler is about a thread about confession.The initial thread's url is [her
 *	show how many stupid things and bad guys in the world
 *	show how many people and things you may want to see and regret.
 *	show this world is still a world deserves love.
+You can have direct access to these comments in `warning_result/README.md`,all these comments and their biscuits are displayed(images not included).
 ## Dependency
 * jieba
 * matplotlib
@@ -139,3 +140,7 @@ This crawler is about a thread about confession.The initial thread's url is [her
 为什么你还想陪她去日本，你还想在那边关照她，她比你学习好，家境好，有未来有前途，比你更会和人说话，还有男朋友，你个200斤的啃老死肥宅在想什么啊，人家的生活处处比你优越，放手吧，别想着默默的看她结婚再放弃了，真的不值得再熬这六年啊！！
 肥适之啊肥适之，醒醒啊！！！！ ！！
 醒醒啊！！！！！！
+
+### My view
+Everyone is an unique piece of this world.We have almost 70~100 years to approach death.During these days,you may have done something really stupid and regret for all your life behind.You met the girl you adore and you missed;you nearly had the chance to succeed but you didn't grasp it;you could say 'I love you' to somebody but they were gone.When you are reading these comments.though pretty enough of them are just kidding,you will share what they regret and remember yours.
+<font color=#0099ff size=7 face="黑体">往事不可追</font>
