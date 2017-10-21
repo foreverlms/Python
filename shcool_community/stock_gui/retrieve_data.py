@@ -65,3 +65,4 @@ def get_code_list() :
 	company_list=[soup.get_text().strip().replace('\xa0','\n').split('\n') for soup in soupList]
 	return company_list
 
+# print(get_code_list())
