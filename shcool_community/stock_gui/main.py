@@ -8,3 +8,10 @@
 # @Path : E:\Code\Python\sublimeText\hipython_cousera\news_title\main.py
 
 
+import gui_wx
+import wx
+
+app=wx.App()
+frame=gui_wx.MyFrame('Stock')
+frame.Show(True)
+app.MainLoop()

@@ -16,8 +16,8 @@ import json
 import pandas as pd
 from datetime import date
 import time
-import numpy as np
-from matplotlib import pylab as pb
+# import numpy as np
+
 
 def retrieve_quotes_historical(stock_code) :
 	quotes=[]
@@ -66,3 +66,12 @@ def get_code_list() :
 	return company_list
 
 # print(get_code_list())
+# a=get_historical_df('intc')
+# print(a)
+# figure1=plt.figure('fig1')
+# a.volume.plot()
+# figure1.show()
+# figure2=plt.figure('fig2')
+# a.open.plot()
+# figure2.show()
+# plt.show()
