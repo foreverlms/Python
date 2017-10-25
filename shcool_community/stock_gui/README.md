@@ -1,3 +1,3 @@
 ## Coursera Class Design
 
-![Alt Window](LearningPython/shcool_community/stock_gui/main.PNG)
+![Alt Window](https://github.com/coderchaser/LearningPython/blob/master/shcool_community/stock_gui/main.PNG)
