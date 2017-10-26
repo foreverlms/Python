@@ -1,0 +1,11 @@
+{
+	// "cmd": ["/usr/bin/python3.4"  "-u" ,"$file"],  
+	// "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",  
+	// "selector": "source.python",  
+	// "encoding": "utf-8",  
+	// "shell": "true",  
+	// "env": {"PYTHONIOENCODING": "utf-8"},
+	"cmd": ["/usr/bin/python3.4","-u","$file"],
+	"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+	"selector": "source.python",
+}
