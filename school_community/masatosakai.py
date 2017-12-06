@@ -10,7 +10,8 @@ import requests
 import os
 import re
 import threading
-from PIL import Image
+#from PIL import Image
+#暂时用不到PIL
 from bs4 import BeautifulSoup
 
 
@@ -22,6 +23,7 @@ def get_link(url) :
 	for image_ in soup_.findAll(name="img",attrs={"src":re.compile(r"https://img\d.doubanio.com/view/photo/m/public/*.*")}) :
 		if not image_.src in LINK_POOL :
 			LINK_POOL.add(image_["src"])
+			#不明白为什么bs4 tag不支持.的方式进行属性访问，难道我用错了？
 	hasNext=soup_.find(name="a",text="后页>")
 	if hasNext :
 		get_link(hasNext["href"])
