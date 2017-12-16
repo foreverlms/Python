@@ -1,6 +1,42 @@
 <!DOCTYPE html>
-<!-- Bob Liao -->
 <html>
+<!-- Author: Bob Liao -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title>selfRefresh</title>
+		<script language="JavaScript">
+			//修改interval_time值可以改变刷新时间，默认1S
+			var interval_time=1;
+			//刷新次数，默认180次，即180分钟，可以修改为你想刷新的分钟数
+			var refresh_time=180;
+			function myrefresh()
+			{
+				document.getElementById("left").value=refresh_time;
+				refresh_time--;
+				      if(refresh_time<0) {
+					window.close();
+				}
+				var myiframe = document.getElementById("myiframe");
+	        			myiframe.src = myiframe.src;
+			}
+			setInterval('myrefresh()',interval_time*1000); //interval_time
+		</script>
+	</head>
+	<body>
+		<!-- 自然辩证法主页 -->
+		<iframe id="myiframe" width="1400" height="400" src="http://202.121.199.138/nature/stumain.asp"></iframe>
+		<!-- 中国特色社会主义主页 -->
+		<!-- <frame id="myiframe" width="500" height="500" src="http://202.121.199.138/Course/StuMain.asp"></iframe> -->
+		<br>
+		<form>	
+			<p>确保你最近（2小时）之内登陆过课程页面，即浏览器记住了你的登录状态，这样才可以刷新，不行的先登陆课程网页。默认刷新180分钟,如果想要刷新自己设置的时间，请用文字编辑器打开refresh.html，将refresh_time的初始值改为你想刷新的分钟数就可以了。
+			</p>
+			<br>
+			已刷新次数，刷新完成会自动关闭网页：
+			<input type="text" id="left" size="5"/>
+		</form>
+	</body>
+=======
 <head>
   <!-- content为刷新频率 -->
 	<meta http-equiv="refresh" content="1">
