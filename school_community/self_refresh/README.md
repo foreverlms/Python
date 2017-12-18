@@ -1,6 +1,6 @@
 ## 中特上课自动刷新
 ### 使用方法
-复制refresh.html内容到本地，保存格式为html，登陆学校[中特学习网站](http://202.121.199.138/Course/Index.asp?System=CSCI)，然后将用浏览器打开refresh.html即可自动刷新。（保持浏览器不关闭）
+复制refresh.html内容到本地，保存格式为html，登陆学校[中特学习网站](http://202.121.199.138/Course/Index.asp?System=CSCI)或者[自然辩证法](http://202.121.199.138/nature/)，然后将用浏览器打开refresh.html即可自动刷新。（保持浏览器不关闭）
 ### 属性说明
-* `content`后面引号内容为刷新频率，默认30S，可以自己用文本编辑器代开refresh.html修改(=_=修改成1s后每次刷新可以增加一分钟计时=_=）
+* HTML文件里的`interval_time`是刷新间隔，默认一秒，刷新一次可以增长一分钟；`refresh_time`为刷新次数，默认180分钟。可以自己用文本编辑器打开refresh.html修改(=_=修改成1s后每次刷新可以增加一分钟计时=_=）
 * `src`为登陆后学校界面网址，如果不能刷新，换成你自己登陆之后的网址。
