@@ -46,6 +46,7 @@ Github作为世界上最大的分布式代码托管网站，对于我们学生�
 Putty是一款小巧的SSH远程登陆软件，我们用它来登陆刚才创建好的服务器。Putty下载链接：链接：https://pan.baidu.com/s/1eTFqxk2 密码：3zqz。
 打开Putty后我们在红框处输入邮箱中收到的droplet IP地址。
 ![putty.png](https://github.com/coderchaser/LearningPython/blob/master/tips/githubeducationdigitalocean/putty.png)
+
 端口不改，默认22。之后会出现窗口，第一行：
 `login as:`，我们输入root，接着会让你输入密码，我们复制邮箱邮件收到的密码粘贴到putty中（粘贴直接右键即可）。粘贴后你不会看到任何效果，因为Linux哲学就是`没有回应就是最好的回应`，直接回车就好。初次登陆，digitalocean会要求你更改密码，重新设置密码就行。至此，我们成功地远程登陆了我们租用的服务器。
 ###Shadowsocks配置
@@ -53,6 +54,7 @@ Putty是一款小巧的SSH远程登陆软件，我们用它来登陆刚才创建
 
 本来Shadowsocks是一款代理软件，但是被天朝的大神们魔改之后，变成了一款fanqiang软件。Shadowsocks配置过程非常繁琐，对于我这种小白（没错，我其实也是小白）来说实在是太麻烦了，不过我follow的一位大神已经帮我们做好了[配置教程](http://miaomiaoai.cn/?p=1011)。按照这篇一键教程，大大精简了配置过程。大家在设置的过程中可以自己去决定shadowsocks的服务端配置，比如加密算法，混淆协议等，我现在用的是下面的规则，感觉有点慢，不过够我用了，之后我会研究一下shadowsocks，改善配置。谁知道规则怎么设置，请指教一下我，我的邮箱：codechaser@163.com。有谁对配置过程不清楚的也可以和我练习。
 ![shadowsocks.png](https://github.com/coderchaser/LearningPython/blob/master/tips/githubeducationdigitalocean/shadowcoks.PNG)
+
 刚才是服务端的配置，现在我们在自己的PC上使用shadowsocks。它有不同版本，我用的是[ShadowsocksR-dotnet4.0](https://pan.baidu.com/s/1dP7UIq)。这是免安装版本。我们进去后选择`添加`来添加服务器。服务器IP是我们创建的droplet地址，端口的话如果你是按照上面那位大神教程做而且没有修改默认是2333，最后加密、协议、混淆按你配置的选。这个弄好之后，我们右键右下角的小飞机图标，选择启用系统代理，系统代理模式选择PAC模式，这样访问国内的网站不会走代理。PAC文件更新有多种途径，大家可以自己去baidu/google，我之后也会再对此进行介绍。
 这个设置好之后，你就可以穿越高墙，直达世界了。***但是，高墙之外的不一定全是好的，甚至充斥着很多邪教、反动势力的言论，这时候如何做全在你自己。有民族自信心、有明辨是非的能力、有对美好明天的向往，相信大家都能查阅资料，投入到科研、进步的征途中。***
 最后，认识我的可以来
