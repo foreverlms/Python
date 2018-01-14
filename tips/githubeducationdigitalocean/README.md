@@ -23,12 +23,13 @@ Github作为世界上最大的分布式代码托管网站，对于我们学生�
 4. 认证学生身份一般需要一段时间，成功之后，你可以在pack列表里找到如下图所示的digitalocean兑换码（马赛克部分）。![Your Code](https://github.com/coderchaser/LearningPython/blob/master/tips/githubeducationdigitalocean/digitalocean.png)。
 5. 按照我的邀请链接注册并验证支付能力后即可兑换50$。
 
-###Paypal账号或者可以进行外币交易的信用卡
+### Paypal账号或者可以进行外币交易的信用卡
 因为digitalocean在里进行注册时会进行邮箱和支付能力双重认证，所以你要么在注册后添加信用卡要么使用paypal充值5美元。这之后才能享受邀请码链接注册优惠。我没有信用卡，Paypal里面可以添加工商银行的借记卡，我就利用这种方式充值了5美元（貌似农业银行的不行）。Paypal注册我就不赘述了。如果你和我一样，最后digitalocean账户上有多少余额呢？一共是：
-<center>**5（自己充值的）+10（邀请链接注册赠送）+50（Github赠送=65$**</center>
+
+**5（自己充值的）+10（邀请链接注册赠送）+50（Github赠送=65$** 
 
 这是最划算的考量（*勤俭持家*）了！
-###Droplet或Instance创建
+### Droplet或Instance创建
 现在账户上有了65$，瞬间感觉土豪了呢！！那就新建一个droplet吧。至于为什么叫droplet？因为网站叫Digitalocean啊！妙不妙！
 创建Droplet就按照GIF所示。
 ![create_droplet.gif](https://github.com/coderchaser/LearningPython/blob/master/tips/githubeducationdigitalocean/droplet_creation.gif)
@@ -42,14 +43,14 @@ Github作为世界上最大的分布式代码托管网站，对于我们学生�
 7. 点击创建按钮，稍等一会问就会完成，服务器的地址、密码会发送至你的注册邮箱里，稍后我们会用到。
 
 至此服务器创建完成，接下来我们来搭建SSR进行科学上网。
-###Putty、Xshell或者其他SSH登陆工具
+### Putty、Xshell或者其他SSH登陆工具
 Putty是一款小巧的SSH远程登陆软件，我们用它来登陆刚才创建好的服务器。Putty下载链接：链接：https://pan.baidu.com/s/1eTFqxk2 密码：3zqz。
 打开Putty后我们在红框处输入邮箱中收到的droplet IP地址。
 ![putty.png](https://github.com/coderchaser/LearningPython/blob/master/tips/githubeducationdigitalocean/putty.png)
 
 端口不改，默认22。之后会出现窗口，第一行：
 `login as:`，我们输入root，接着会让你输入密码，我们复制邮箱邮件收到的密码粘贴到putty中（粘贴直接右键即可）。粘贴后你不会看到任何效果，因为Linux哲学就是`没有回应就是最好的回应`，直接回车就好。初次登陆，digitalocean会要求你更改密码，重新设置密码就行。至此，我们成功地远程登陆了我们租用的服务器。
-###Shadowsocks配置
+### Shadowsocks配置
 >Shadowsocks----A secure socks5 proxy,designed to protect your Internet traffic.
 
 本来Shadowsocks是一款代理软件，但是被天朝的大神们魔改之后，变成了一款fanqiang软件。Shadowsocks配置过程非常繁琐，对于我这种小白（没错，我其实也是小白）来说实在是太麻烦了，不过我follow的一位大神已经帮我们做好了[配置教程](http://miaomiaoai.cn/?p=1011)。按照这篇一键教程，大大精简了配置过程。大家在设置的过程中可以自己去决定shadowsocks的服务端配置，比如加密算法，混淆协议等，我现在用的是下面的规则，感觉有点慢，不过够我用了，之后我会研究一下shadowsocks，改善配置。谁知道规则怎么设置，请指教一下我，我的邮箱：codechaser@163.com。有谁对配置过程不清楚的也可以和我练习。
