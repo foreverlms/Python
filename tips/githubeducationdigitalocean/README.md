@@ -65,8 +65,10 @@ Putty是一款小巧的SSH远程登陆软件，我们用它来登陆刚才创建
 
 ----
 一键更换Centos内核以安装锐速：
-`wget --no-check-certificate https://blog.asuhu.com/sh/ruisu.sh
-bash ruisu.sh`
+
+`wget --no-check-certificate https://blog.asuhu.com/sh/ruisu.sh bash ruisu.sh`
+
 一键shadowsocks配置脚本：
+
 `wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 `
