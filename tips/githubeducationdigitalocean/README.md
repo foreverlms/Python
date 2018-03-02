@@ -72,3 +72,5 @@ Putty是一款小巧的SSH远程登陆软件，我们用它来登陆刚才创建
 
 `wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 `
+## Problem Sheet
+[SSR_Problem.md](https://github.com/coderchaser/LearningPython/blob/master/tips/githubeducationdigitalocean/SSR_Problem.md)
