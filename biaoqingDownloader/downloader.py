@@ -12,7 +12,7 @@ import requests
 import random
 import json
 import threading
-# from decorator import downloader_logger
+from decorator import downloader_logger
 
 # code 0 represents https://www.doutula.com/apidoc
 API_URL_DICT={0:"https://www.doutula.com/api/search?keyword={keyword}&mime={image_type}&page={page}"}
@@ -112,7 +112,7 @@ def download(**kwargs):
             dirpath=kwargs['dir']+"/"+keyword
         else :
             dirpath='./tmp/'+keyword
-        print(dirpath)
+        print('Making dir:',dirpath)
         downloader=Downloader(kwargs['num'],keyword,kwargs['type'],dirpath,kwargs['verbose'])
         downloader.run()
 
