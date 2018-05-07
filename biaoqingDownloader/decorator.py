@@ -1,8 +1,9 @@
-#!/usr/bin/env python3.4
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Date    : 2018-04-20 00:31:57
+# @Date    : 2018-04-21 21:01:40
 # @Author  : Bob Liao (codechaser@163.com)
 # @Link    : https://github.com/coderchaser
+
 
 import logging
 import os

@@ -1,6 +1,6 @@
-#!/usr/bin/env python3.4
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Date    : 2018-04-20 13:15:38
+# @Date    : 2018-04-21 21:02:28
 # @Author  : Bob Liao (codechaser@163.com)
 # @Link    : https://github.com/coderchaser
 
@@ -13,6 +13,10 @@ import random
 import json
 import threading
 from decorator import downloader_logger
+import tkinter.messagebox as messagebox
+
+
+TOTAL_NUMBER = 0
 
 # code 0 represents https://www.doutula.com/apidoc
 API_URL_DICT={0:"https://www.doutula.com/api/search?keyword={keyword}&mime={image_type}&page={page}"}
@@ -26,7 +30,11 @@ USER_AGENTS = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:11.0) Gecko/2010
                 'Safari/536.5'), )
 
 class Downloader(object) :
-    def __init__(self,number,keyword,image_type,filepath,verbose,api_code=0) :
+
+    totalCount=0
+    lastCount = 0
+
+    def __init__(self,number,keyword,image_type,filepath,verbose,api_code=0,progressBar=None,totalNumber=0,initTotalCount=None) :
         #TODO: self.__image_url_list defined as queue instead of list to support multi thread downloading
         self.__image_url_list = []
         #a list for storing image urls
@@ -42,6 +50,17 @@ class Downloader(object) :
         #where to store those images
         self.__verbose = verbose
         #enable the verbose info?
+        self.__count=0
+        #用于progressbar
+        self.__progressBar = progressBar
+
+        if initTotalCount :
+            Downloader.totalCount=0
+        global TOTAL_NUMBER
+        TOTAL_NUMBER = totalNumber
+
+        self.totalCount += self.lastCount
+    
     def __get_image_url(self) :
         for i in range(1,51) :
             api_url=API_URL_DICT[self.__api_code].format(keyword=self.__keyword,image_type=self.__image_type,page=i)
@@ -61,7 +80,9 @@ class Downloader(object) :
 
     def __download(self):
         self.__get_image_url()
-        print('Now downloading images from https://www.doutula.com ...')
+        if not self.__image_url_list :
+            messagebox.showerror("错误","你输入的关键词无搜索结果返回！请修改！")
+        # print('Now downloading images from https://www.doutula.com ...')
         if not os.path.exists(self.__filepath):
             os.makedirs(self.__filepath)
         for i in range(self.__number) :
@@ -75,10 +96,18 @@ class Downloader(object) :
                 download_rq=requests.get(image_url)
                 with open(filename,'wb') as f :
                     f.write(download_rq.content)
+                self.__count+=1
             except Exception as e:
                 print(e)
             time.sleep(1)
+            Downloader.totalCount+=1
+            progress =int((Downloader.totalCount / TOTAL_NUMBER)*100)
+            self.__progressBar["value"]=progress
+        Downloader.lastCount+=Downloader.totalCount
         print("Images about {} have been downloaded.".format(self.__keyword))
+
+    def get_count(self) :
+        return (self.__count/self.__number)*100
     def run(self) :
         self.__download()
 
