@@ -19,3 +19,13 @@ A simple demo of downloading related pics from [doutula](http://www.doutula.com/
   -c, --clear           enable clear the log file
   -d DIR, --dir DIR     where to store the images, default is ./tmp/keyword/
   -v, --verbose         enable show the whole downloading info
+
+
+## GUI
+
+GUI designed with `tkinter`, which really sucks... 
+
+## TODO LIST
+
+* The download speed of those images are really slow. So if I have the chance to update this, I want to try multi threads to download images.
+* Some logical operations need to have more consideration.
