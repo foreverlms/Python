@@ -11,4 +11,4 @@
 PS:以上地址会变动，请已上面网址里的host为准。
 
 ## PAC txt 
-[pac.txt](https://raw.githubusercontent.com/coderchaser/LearningPython/master/tips/githubeducationdigitalocean/pac.txt)
+[pac.txt](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/coderchaser/LearningPython/blob/master/tips/githubeducationdigitalocean/pac.txt)
