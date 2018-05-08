@@ -9,3 +9,6 @@
 2401:3800:4001:10::101f scholar.google.cn #www.google.cn
 ```
 PS:以上地址会变动，请已上面网址里的host为准。
+
+## PAC txt 
+[pac.txt](https://raw.githubusercontent.com/coderchaser/LearningPython/master/tips/githubeducationdigitalocean/pac.txt)
