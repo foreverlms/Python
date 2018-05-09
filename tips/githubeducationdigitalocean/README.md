@@ -49,7 +49,7 @@ Putty是一款小巧的SSH远程登陆软件，我们用它来登陆刚才创建
 ![putty.png](https://github.com/coderchaser/LearningPython/blob/master/tips/githubeducationdigitalocean/putty.png)
 
 端口不改，默认22。之后会出现窗口，第一行：
-`login as:`，我们输入root，接着会让你输入密码，我们复制邮箱邮件收到的密码粘贴到putty中（粘贴直接右键即可）。粘贴后你不会看到任何效果，因为Linux哲学就是`没有回应就是最好的回应`，直接回车就好。初次登陆，digitalocean会要求你更改密码，重新设置密码就行。至此，我们成功地远程登陆了我们租用的服务器。
+`login as:`，我们输入root，接着会让你输入密码，我们复制邮箱邮件收到的密码粘贴到putty中（粘贴直接右键即可）。粘贴后你不会看到任何效果，因为Linux哲学就是`没有回应就是最好的回应`，直接回车就好。初次登陆，digitalocean会要求你更改密码，这时候再粘贴一次刚才邮箱收到的密码，然后重新设置密码就行（要输入两次）。至此，我们成功地远程登陆了我们租用的服务器。
 ### Shadowsocks配置
 >Shadowsocks----A secure socks5 proxy,designed to protect your Internet traffic.
 
