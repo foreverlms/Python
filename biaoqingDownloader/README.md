@@ -1,5 +1,6 @@
 ## biaoqingImageDownloader
 
+## ~~Terminal Usage~~
 A simple demo of downloading related pics from [doutula](http://www.doutula.com/)
 
 >usage: downloader.py [-h] [-t {0,1,2}] [-n NUM] [-c] [-d DIR] [-v]
@@ -24,6 +25,10 @@ A simple demo of downloading related pics from [doutula](http://www.doutula.com/
 ## GUI
 
 GUI designed with `tkinter`, which really sucks... 
+
+## HOW TO USE
+
+![demo.gif](./demo.gif)
 
 ## TODO LIST
 
