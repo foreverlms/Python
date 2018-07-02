@@ -60,7 +60,7 @@ You can have direct access to these comments in `warning_result/README.md`,all t
 * ('人生', 17)
 
 
-![bar graph](https://github.com/coderchaser/LearningPython/blob/version-1/adao_crawler/zhuzhuangtu.jpg)
+![bar graph](https://github.com/coderchaser/LearningPython/blob/master/adao_crawler/zhuzhuangtu.png)
 
 #### wordcloud
 
