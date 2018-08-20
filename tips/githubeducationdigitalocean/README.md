@@ -4,7 +4,7 @@
 * Github Education认证
 * Paypal账号或者可以进行外币交易的信用卡
 * Digitalocean 或者Vultr 邀请注册
-	* 我的digitalocean邀请链接：[Digitalocean](https://m.do.co/c/9f3a141bb280),点击链接进行注册，你我账户上都会被赠送10$，类似于支付宝互相扫红包。
+	~~* 我的digitalocean邀请链接：[Digitalocean](https://m.do.co/c/9f3a141bb280),点击链接进行注册，你我账户上都会被赠送10$，类似于支付宝互相扫红包。~~  **如果你要用Digital Ocean，请不要点击这个优惠链接，因为DO的学生优惠码与这个冲突，二者只能用一个，当然是选50$的Github Education优惠码。**
 	* 我的vultr邀请链接：[Vultr](https://www.vultr.com/?ref=7307591),点击链接进行注册，你我账户上都会被赠送10$，类似于支付宝互相扫红包。PS:使用vultr购买VPS不会有下文介绍的Github Education优惠，我就不多说，都差不多。
 * Droplet或Instance创建
 * Putty、Xshell或者其他SSH登陆工具
@@ -26,7 +26,7 @@ Github作为世界上最大的分布式代码托管网站，对于我们学生�
 ### Paypal账号或者可以进行外币交易的信用卡
 因为digitalocean在里进行注册时会进行邮箱和支付能力双重认证，所以你要么在注册后添加信用卡要么使用paypal充值5美元。这之后才能享受邀请码链接注册优惠。我没有信用卡，Paypal里面可以添加工商银行的借记卡，我就利用这种方式充值了5美元（貌似农业银行的不行）。Paypal注册我就不赘述了。如果你和我一样，最后digitalocean账户上有多少余额呢？一共是：
 
-**5（自己充值的）+10（邀请链接注册赠送）+50（Github赠送=65$** 
+**5（自己充值的）+50（Github赠送=55$** 
 
 这是最划算的考量（*勤俭持家*）了！
 ### Droplet或Instance创建
