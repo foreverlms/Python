@@ -5,7 +5,7 @@
 * Paypal账号或者可以进行外币交易的信用卡
 * Digitalocean 或者Vultr 邀请注册
 
-	~~ * 我的digitalocean邀请链接：[Digitalocean](https://m.do.co/c/9f3a141bb280),点击链接进行注册，你我账户上都会被赠送10$，类似于支付宝互相扫红包。~~  **如果你要用Digital Ocean，请不要点击这个优惠链接，因为DO的学生优惠码与这个冲突，二者只能用一个，当然是选50$的Github Education优惠码。**
+	~~* 我的digitalocean邀请链接：[Digitalocean](https://m.do.co/c/9f3a141bb280),点击链接进行注册，你我账户上都会被赠送10$，类似于支付宝互相扫红包。~~  **如果你要用Digital Ocean，请不要点击这个优惠链接，因为DO的学生优惠码与这个冲突，二者只能用一个，当然是选50$的Github Education优惠码。**
 	* 我的vultr邀请链接：[Vultr](https://www.vultr.com/?ref=7307591),点击链接进行注册，你我账户上都会被赠送10$，类似于支付宝互相扫红包。PS:使用vultr购买VPS不会有下文介绍的Github Education优惠，我就不多说，都差不多。
 * Droplet或Instance创建
 * Putty、Xshell或者其他SSH登陆工具
