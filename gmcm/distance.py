@@ -24,12 +24,16 @@ GET_DISTANCE= "https://restapi.amap.com/v3/distance"
 #注册高德开发者之后申请的API密钥
 KEY = "REPLACE_THIS_WITH_YOUR_OWN_KEY"
 
+#经纬度获取参数 
 LOCATION_PARAMS = {'address':"",'output':"json",'key':KEY,'batch':"true"}
-
+#测距参数
 DISTANCE_PARAMETERS = {'origins':"",'output':'json','key':KEY,'destination':"",'type':"0"}
 
 
 def get_codes():
+	'''
+	获取每个城市的经纬度
+	'''
 	first_ten = cities[:10]
 	address = '|'.join(first_ten)
 	LOCATION_PARAMS['address'] = address
@@ -47,6 +51,9 @@ def get_codes():
 
 
 def get_distance():
+	'''
+	得到12个城市间的相互距离
+	'''
 	for i in range(len(cities)):
 		origin = city_codes[cities[i]]
 		DISTANCE_PARAMETERS['origins'] = origin
@@ -62,6 +69,9 @@ def get_distance():
 			
 
 def xlsx_write():
+	'''
+	将数据写入到distance.xlsx中
+	'''
 	wb = openpyxl.Workbook()
 	ws = wb.active
 	ws.title = "表1"
