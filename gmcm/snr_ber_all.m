@@ -1,3 +1,7 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Author: Bob Liao
+%Email:codechaser@163.com
+%%%%%%%%%%%%%%%%%%%%%%%%
 function snr_ber_all()
     clear;
     %信噪比向量
