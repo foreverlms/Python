@@ -21,7 +21,8 @@ for i in cities:
 GET_LOCATION = "https://restapi.amap.com/v3/geocode/geo"
 GET_DISTANCE= "https://restapi.amap.com/v3/distance"
 
-KEY = "73cb0025ebc81330b0b89d9482316bd3"
+#注册高德开发者之后申请的API密钥
+KEY = "REPLACE_THIS_WITH_YOUR_OWN_KEY"
 
 LOCATION_PARAMS = {'address':"",'output':"json",'key':KEY,'batch':"true"}
 
