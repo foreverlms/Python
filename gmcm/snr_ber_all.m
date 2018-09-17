@@ -50,12 +50,20 @@ function ber = get_ber(M)
     %每个码元数据应该转化为16进制数用于调制
     signal_de = bi2de(signal_k.','left-msb');
     %根据M为4，8，16时分别进行QPSK,8QAM,16QAM调制
-    signal_modulated = modulate(modem.qammod(M),signal_de);
+    if M == 4
+        signal_modulated = modulate(modem.pskmod(M,pi/4),signal_de);
+    else
+        signal_modulated = modulate(modem.qammod(M),signal_de);
+    end
     for ii = 1:length(SNR)
         %加性高斯噪声叠加
         signal_awgn = awgn(signal_modulated,SNR(ii),'measured');
         %解调经过噪声叠加的数据，解调方式应与调制方式一致
-        signal_demodulated = demodulate(modem.qamdemod(M),signal_awgn);
+        if M ==4
+            signal_demodulated = demodulate(modem.pskdemod(M,pi/4),signal_awgn);
+        else
+            signal_demodulated = demodulate(modem.qamdemod(M),signal_awgn);
+        end
         %将解调出来的16进制数转化为二进制码元矩阵
         signal_bi = de2bi(signal_demodulated,'left-msb');
         %码元矩阵转比特流
