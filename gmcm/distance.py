@@ -17,7 +17,7 @@ for i in cities:
 	distance[i] = {}
 
 
-##这里可能会出错
+##高德经纬度、距离API
 GET_LOCATION = "https://restapi.amap.com/v3/geocode/geo"
 GET_DISTANCE= "https://restapi.amap.com/v3/distance"
 
