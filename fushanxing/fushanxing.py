@@ -1,6 +1,6 @@
 #!/usr/bin/env/python3
 # coding:utf-8
-#aythor:Bob Liao
+#author:Bob Liao
 #email:codechaser1@gmail.com
 #practicing codes from https://www.shiyanlou.com/courses/677
 #latest update on 2017-05-27 21:34
