@@ -1,4 +1,7 @@
-# LearningPython
+## LearningPython
+
+记录一下之前学习Python的过程中写下的东西。
+
 
     including the codes during my python-learning period
     first edited on 2017-04-12
